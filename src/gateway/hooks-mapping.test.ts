@@ -197,10 +197,10 @@ describe("hooks mapping", () => {
 
     expect(resultA?.ok).toBe(true);
     expect(resultB?.ok).toBe(true);
-    if (resultA?.ok && resultA.action.kind === "wake") {
+    if (resultA?.ok && resultA.action?.kind === "wake") {
       expect(resultA.action.text).toBe("safe:1");
     }
-    if (resultB?.ok && resultB.action.kind === "wake") {
+    if (resultB?.ok && resultB.action?.kind === "wake") {
       expect(resultB.action.text).toBe("strict:2");
     }
   });
